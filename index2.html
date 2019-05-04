@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/images/marvel-favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+     <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
+  <!-- Style to fix the issue of text extending past card length -->
+  <style>
+    .card-body a {
+      word-break: break-all;
+    }
+
+    .articleHeadline {
+      line-height: 1.5;
+    }
+  </style>
+  <title>Marvel All in One</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <div class="jumbotron" style="background-color: rgb(7, 14, 79) ; color:whitesmoke;">
+        <h1 class="text-center">
+          <strong>
+            <i class="fas fa-mask"></i> Who is your Favorite Marvel Character?</strong>
+        </h1>
+      </div>
+      <!-- Here we create the text box for capturing the search term-->
+      <div> Welcome! Use this as your go-to-site for all about your favorite Marvel</div>
+      <label for="character"> Enter Your Hero's Name Here: </label>
+      <input type="text" name="heroName" id="heroName"><br>
+      <input type="submit" id="submit">
+      <div class="form-group">
+        <label for="pwd">Number of Records to Retrieve:</label>
+        <select id="article-count" class="custom-select" aria-labelledby="dropdownMenuButton">
+          <option selected value="1">1</option>
+          <!-- Setting the option for 5 as default -->
+          <option value="5" selected>5</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+      <button class="btn btn-default" id="clear-all">
+        <i class="fa fa-trash"></i> Clear Results</button>
+
+  </form>
+
+  </fieldset>
+
+
+
+  <!-- Here we capture the number of records that the user wants to retrieve  -->
+
+  <!-- This row will handle all of the retrieved articles -->
+  <div class="row">
+    <div class="col-sm-12">
+      <br>
+
+      <!-- This card will initially be made up of a card and wells for each of the articles retrieved -->
+      <div class="card">
+
+        <!-- card Heading for the retrieved articles box -->
+        <div class="card-header">
+          <strong>
+            <i class="fa fa-table"></i> Comic Results</strong>
+        </div>
+
+        <!-- This main card will hold each of the resulting articles -->
+        
+          <form class="card-body" id="article-section">
+            <p>Name: <strong><span id="name"></span></strong></p>
+            <p>Description: <span id="description"></span></p>
+            <p>comic 1: <span id="comics1"></span></p>
+            <p>comic 2: <span id="comics2"></span></p>
+            <p>comic 3: <span id="comics3"></span></p>
+            <p>comic 4: <span id="comics4"></span></p>
+            <p>comic 5: <span id="comics5"></span></p>
+            
+
+            <p>Stories: <span id="stories"></span></p>
+            <div id="thumbNail"></div>
+
+            <p>videos: <span id="description1"></span></p>
+          </form>
+        
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="/Users/salatielsuriel/Desktop/rutgers/Homework/Team5/marvel2_js__modify_.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+</body>
+
+</html>
